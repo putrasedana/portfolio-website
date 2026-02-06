@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { stats } from "@/data/home-page";
-import CountUp from "react-countup";
+import { stats } from '@/data/home-page';
+import CountUp from 'react-countup';
 
 const Stats = () => {
   return (
-    <section className="mt-8">
+    <section className="mt-10">
       <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
         {stats.map((item, index) => {
           return (
@@ -21,7 +21,7 @@ const Stats = () => {
               />
               <p
                 className={`${
-                  item.text.length < 15 ? "max-w-25" : "max-w-37.5"
+                  item.text.length < 15 ? 'max-w-25' : 'max-w-37.5'
                 } leading-snug text-white/80`}
               >
                 {item.text}

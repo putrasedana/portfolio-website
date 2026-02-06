@@ -6,8 +6,8 @@ import Stats from '@/components/Stats';
 
 const Home = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-12">
-      <div className="flex flex-col xl:flex-row items-center justify-between xl:py-6">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-10">
+      <div className="flex flex-col xl:flex-row items-center justify-between">
         {/* text */}
         <div className="text-center xl:text-left order-2 xl:order-0">
           <span className="text-xl">Web Developer</span>
