@@ -1,4 +1,4 @@
-import { socials } from "@/data/home-page";
+import { socials } from '@/data/home-page';
 
 interface SocialProps {
   containerStyles: string;
@@ -18,6 +18,7 @@ const Social = ({ containerStyles, iconStyles }: SocialProps) => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={social.label}
+            title={social.label}
           >
             <Icon />
           </a>

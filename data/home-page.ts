@@ -1,18 +1,18 @@
-import { FaGithub } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { FaGithub } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 const stats = [
-  { num: 8, text: "Months of Experience" },
-  { num: 20, text: "Projects Completed" },
-  { num: 8, text: "Core Technologies" },
-  { num: 16, text: "Courses Completed" },
+  { num: 8, text: 'Months of Experience' },
+  { num: 10, text: 'Projects Completed' },
+  { num: 9, text: 'Core Technologies' },
+  { num: 16, text: 'Courses Completed' },
 ];
 
 const socials = [
   {
     icon: FaGithub,
-    path: "https://github.com/putrasedana",
-    label: "GitHub Profile",
+    path: 'https://github.com/putrasedana',
+    label: 'GitHub Profile',
   },
   // {
   //   icon: FaLinkedin ,
@@ -21,8 +21,8 @@ const socials = [
   // },
   {
     icon: MdEmail,
-    path: "mailto:putrasedana03@gmail.com",
-    label: "Send Email",
+    path: 'mailto:putrasedana03@gmail.com',
+    label: 'Send Email',
   },
 ];
 

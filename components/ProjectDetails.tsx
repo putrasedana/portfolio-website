@@ -16,7 +16,7 @@ export default function ProjectDetails({ project }: Props) {
 
         <ul className="flex gap-4">
           {project.stack.map((item, i) => (
-            <li key={i} className="flex items-center gap-2">
+            <li key={i} className="flex flex-wrap items-center gap-2">
               {item.name === 'Next.js' ? (
                 <div className="bg-white rounded-full flex items-center justify-center">
                   <Image

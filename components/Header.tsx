@@ -1,11 +1,11 @@
-import Link from "next/link";
-import { Button } from "./ui/button";
-import Nav from "./Nav";
-import MobileNav from "./MobileNav";
+import Link from 'next/link';
+import { Button } from './ui/button';
+import Nav from './Nav';
+import MobileNav from './MobileNav';
 
 const Header = () => {
   return (
-    <header className="py-8 text-white">
+    <header className="py-8 text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
       <div className="max-w-5xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <Link href="/">

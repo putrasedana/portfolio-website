@@ -53,7 +53,7 @@ export default function ProjectSlider({
             onPrev={() => swiperRef.current?.slidePrev()}
             onNext={() => swiperRef.current?.slideNext()}
             containerStyles="flex gap-2"
-            btnStyles="bg-green-500 hover:bg-green-600 text-slate-800 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+            btnStyles="bg-green-500 hover:bg-green-600 text-slate-800 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all cursor-pointer"
           />
         </div>
       </Swiper>

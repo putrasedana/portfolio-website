@@ -14,26 +14,27 @@ type Props = {
 export default function ProjectCategorySection({ category, index }: Props) {
   return (
     <motion.section
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.5 }}
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2, duration: 0.4 },
+      }}
       className="flex flex-col gap-6"
     >
       {/* Header */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between justify-between items-center mb-8">
         <div className="flex items-baseline gap-4">
-          <span className="text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
+          <span className="text-4xl lg:text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
             {String(index + 1).padStart(2, '0')}
           </span>
 
-          <h2 className="text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
             {category.label}
           </h2>
         </div>
 
         <div
-          className={`w-15 h-15 rounded-full flex items-center justify-center ${category.label == 'Next.js' ? 'bg-white  border border-white' : 'bg-transparent'}`}
+          className={`w-15 h-15 rounded-full flex items-center justify-center ${category.id == 'nextjs' ? 'bg-white  border border-white' : 'bg-transparent'}`}
         >
           <Image
             src={category.icon}

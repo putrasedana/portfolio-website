@@ -1,13 +1,12 @@
-import { Button } from "@/components/ui/button";
-import { FiDownload } from "react-icons/fi";
-// components
-import Social from "@/components/Social";
-import Photo from "@/components/Photo";
-import Stats from "@/components/Stats";
+import { Button } from '@/components/ui/button';
+import { FiDownload } from 'react-icons/fi';
+import Social from '@/components/Social';
+import Photo from '@/components/Photo';
+import Stats from '@/components/Stats';
 
 const Home = () => {
   return (
-    <div className="max-w-5xl mx-auto">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-12">
       <div className="flex flex-col xl:flex-row items-center justify-between xl:py-6">
         {/* text */}
         <div className="text-center xl:text-left order-2 xl:order-0">
@@ -25,6 +24,7 @@ const Home = () => {
               variant="outline"
               size="lg"
               className="uppercase flex items-center gap-2"
+              title="View or Download CV"
             >
               <span>Download CV</span>
               <FiDownload className="text-xl" />

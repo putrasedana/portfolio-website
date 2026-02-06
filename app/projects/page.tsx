@@ -7,12 +7,12 @@ import { motion } from 'framer-motion';
 
 export default function ProjectsPage() {
   return (
-    <section className="max-w-5xl mx-auto py-12">
+    <section className="max-w-5xl mx-auto py-10 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4 }}
-        className="flex flex-col gap-20"
+        className="flex flex-col gap-24"
       >
         {projectCategories.map((category, index) => (
           <ProjectCategorySection
