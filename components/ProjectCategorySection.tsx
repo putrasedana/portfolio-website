@@ -1,10 +1,10 @@
 // components/projects/ProjectCategorySection.tsx
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { ProjectCategory } from '@/data/project-page';
-import ProjectViewer from './ProjectViewer';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { ProjectCategory } from "@/data/project-page";
+import ProjectViewer from "./ProjectViewer";
+import Image from "next/image";
 
 type Props = {
   category: ProjectCategory;
@@ -25,7 +25,7 @@ export default function ProjectCategorySection({ category, index }: Props) {
       <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between justify-between items-center mb-8">
         <div className="flex items-baseline gap-4">
           <span className="text-4xl lg:text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
-            {String(index + 1).padStart(2, '0')}
+            {String(index + 1).padStart(2, "0")}
           </span>
 
           <h2 className="text-4xl lg:text-5xl font-extrabold text-transparent [-webkit-text-stroke:1px_white]">
@@ -34,7 +34,7 @@ export default function ProjectCategorySection({ category, index }: Props) {
         </div>
 
         <div
-          className={`w-15 h-15 rounded-full flex items-center justify-center ${category.id == 'nextjs' ? 'bg-white  border border-white' : 'bg-transparent'}`}
+          className={`w-15 h-15 rounded-full flex items-center justify-center ${category.id == "fullstack" ? "bg-white  border border-white" : "bg-transparent"}`}
         >
           <Image
             src={category.icon}

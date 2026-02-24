@@ -10,142 +10,155 @@ export type Project = {
 };
 
 export type ProjectCategory = {
-  id: 'javascript' | 'react' | 'nextjs' | 'express';
+  id: "frontend" | "fullstack" | "backend";
   label: string;
   icon: string;
   projects: Project[];
 };
 
 export const projectCategories: ProjectCategory[] = [
+  // {
+  //   id: 'javascript',
+  //   label: 'JavaScript',
+  //   icon: '/assets/js.png',
+  //   projects: [
+  //     {
+  //       title: 'Public Notes App',
+  //       description:
+  //         'A simple, clean web-based tool to create and manage your daily notes quickly and easily. Capture your thoughts, ideas, to-dos, and reminders. Powered by Dicoding Notes API https://notes-api.dicoding.dev/v2.',
+  //       stack: [
+  //         { name: 'HTML', icon: '/assets/html-5.png' },
+  //         { name: 'CSS', icon: '/assets/css-3.png' },
+  //         { name: 'JavaScript', icon: '/assets/js.png' },
+  //       ],
+  //       image: '/assets/javascript-project-1.png',
+  //       live: 'https://public-notes-app.netlify.app/',
+  //       github: 'https://github.com/putrasedana/public-notes-app',
+  //     },
+  //     {
+  //       title: 'Story App',
+  //       description:
+  //         'Platform for sharing image-based stories, featuring user authentication and form validation. Powered by Dicoding Story API https://story-api.dicoding.dev/v1.',
+  //       stack: [
+  //         { name: 'HTML', icon: '/assets/html-5.png' },
+  //         { name: 'SASS', icon: '/assets/sass.png' },
+  //         { name: 'JavaScript', icon: '/assets/js.png' },
+  //       ],
+  //       image: '/assets/javascript-project-2.png',
+  //       live: 'https://story-app-0011.netlify.app/',
+  //       github: 'https://github.com/putrasedana/story-app',
+  //     },
+  //   ],
+  // },
+
   {
-    id: 'javascript',
-    label: 'JavaScript',
-    icon: '/assets/js.png',
+    id: "frontend",
+    label: "Front-End",
+    icon: "/assets/react.png",
     projects: [
       {
-        title: 'Public Notes App',
+        title: "Personal Notes App",
         description:
-          'A simple, clean web-based tool to create and manage your daily notes quickly and easily. Capture your thoughts, ideas, to-dos, and reminders. Powered by Dicoding Notes API https://notes-api.dicoding.dev/v2.',
+          "Modern note-taking web app built with React, featuring authentication, protected routes, and a smooth user experience. Powered by Dicoding Notes API https://notes-api.dicoding.dev/v1.",
         stack: [
-          { name: 'HTML', icon: '/assets/html-5.png' },
-          { name: 'CSS', icon: '/assets/css-3.png' },
-          { name: 'JavaScript', icon: '/assets/js.png' },
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
         ],
-        image: '/assets/javascript-project-1.png',
-        live: 'https://public-notes-app.netlify.app/',
-        github: 'https://github.com/putrasedana/public-notes-app',
+        image: "/assets/react-project-1.png",
+        live: "https://personal-notes-app-0011.netlify.app/",
+        github: "https://github.com/putrasedana/personal-notes-app",
       },
       {
-        title: 'Story App',
+        title: "Random Forum App",
         description:
-          'Platform for sharing image-based stories, featuring user authentication and form validation. Powered by Dicoding Story API https://story-api.dicoding.dev/v1.',
+          "A simple, interactive web forum where users can create and join discussions, post messages, and engage with others in community-style threads. Powered by Dicoding Forum API https://forum-api.dicoding.dev/v1.",
         stack: [
-          { name: 'HTML', icon: '/assets/html-5.png' },
-          { name: 'SASS', icon: '/assets/sass.png' },
-          { name: 'JavaScript', icon: '/assets/js.png' },
+          { name: "JavaScript", icon: "/assets/js.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
         ],
-        image: '/assets/javascript-project-2.png',
-        live: 'https://story-app-0011.netlify.app/',
-        github: 'https://github.com/putrasedana/story-app',
+        image: "/assets/react-project-2.png",
+        live: "https://random-forum-app.vercel.app/",
+        github: "https://github.com/putrasedana/random-forum-app",
       },
     ],
   },
 
   {
-    id: 'react',
-    label: 'React',
-    icon: '/assets/react.png',
+    id: "fullstack",
+    label: "Full-Stack",
+    icon: "/assets/nextjs.png",
     projects: [
       {
-        title: 'Personal Notes App',
-        description:
-          'Modern note-taking web app built with React, featuring authentication, protected routes, and a smooth user experience. Powered by Dicoding Notes API https://notes-api.dicoding.dev/v1.',
+        title: "Pixeldenz Store",
+        description: "A website that offer free professional, production-ready Next.js templates and UI components.",
         stack: [
-          { name: 'TypeScript', icon: '/assets/typescript.png' },
-          { name: 'React', icon: '/assets/react.png' },
-          { name: 'Tailwind', icon: '/assets/tailwind.png' },
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "Next.js", icon: "/assets/nextjs.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+          { name: "Supabase", icon: "/assets/supabase.png" },
         ],
-        image: '/assets/react-project-1.png',
-        live: 'https://personal-notes-app-0011.netlify.app/',
-        github: 'https://github.com/putrasedana/personal-notes-app',
+        image: "/assets/nextjs-project-1.png",
+        live: "https://pixeldenz.store/",
+        github: "https://github.com/putrasedana/pixeldenz",
       },
       {
-        title: 'Random Forum App',
+        title: "DevEvent Website",
         description:
-          'A simple, interactive web forum where users can create and join discussions, post messages, and engage with others in community-style threads. Powered by Dicoding Forum API https://forum-api.dicoding.dev/v1.',
+          "A Dev Event Platform is a modern application where users can browse, create, and manage developer-focused events with ease.",
         stack: [
-          { name: 'JavaScript', icon: '/assets/js.png' },
-          { name: 'React', icon: '/assets/react.png' },
-          { name: 'Tailwind', icon: '/assets/tailwind.png' },
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "Next.js", icon: "/assets/nextjs.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+          { name: "MongoDB", icon: "/assets/mongodb.png" },
         ],
-        image: '/assets/react-project-2.png',
-        live: 'https://random-forum-app.vercel.app/',
-        github: 'https://github.com/putrasedana/random-forum-app',
+        image: "/assets/nextjs-project-2.png",
+        live: "https://dev-events-0011.vercel.app/",
+        github: "https://github.com/putrasedana/dev-events",
       },
     ],
   },
 
   {
-    id: 'nextjs',
-    label: 'Next.js',
-    icon: '/assets/nextjs.png',
+    id: "backend",
+    label: "Back-End",
+    icon: "/assets/nodejs.png",
     projects: [
       {
-        title: 'Next.js Template Store',
+        title: "Bookshelf API",
         description:
-          'A website that offer free professional, production-ready Next.js templates and UI components.',
+          "RESTful API project to manage a simple book collection backend. It supports basic CRUD operations (Create, Read, Update, Delete) for books, making it a practical submission project for learning backend development and API design.",
         stack: [
-          { name: 'TypeScript', icon: '/assets/typescript.png' },
-          { name: 'Next.js', icon: '/assets/nextjs.png' },
-          { name: 'Tailwind', icon: '/assets/tailwind.png' },
-          { name: 'Supabase', icon: '/assets/supabase.png' },
+          { name: "Node.js", icon: "/assets/nodejs.png" },
+          { name: "Hapi.js", icon: "/assets/hapi.png" },
         ],
-        image: '/assets/nextjs-project-1.png',
-        live: 'https://pixeldenz.store/',
-        github: 'https://github.com/putrasedana/pixeldenz',
-      },
-    ],
-  },
-
-  {
-    id: 'express',
-    label: 'Hapi & Express',
-    icon: '/assets/express.jpg',
-    projects: [
-      {
-        title: 'Bookshelf API',
-        description:
-          'RESTful API project to manage a simple book collection backend. It supports basic CRUD operations (Create, Read, Update, Delete) for books, making it a practical submission project for learning backend development and API design.',
-        stack: [
-          { name: 'Node.js', icon: '/assets/nodejs.png' },
-          { name: 'Hapi.js', icon: '/assets/hapi.png' },
-        ],
-        image: '/assets/express-project-1.webp',
-        github: 'https://github.com/putrasedana/bookshelf-api',
+        image: "/assets/express-project-1.webp",
+        github: "https://github.com/putrasedana/bookshelf-api",
       },
       {
-        title: 'Task Management API',
+        title: "Task Management API",
         description:
-          'RESTful backend service for managing tasks, built with Express.js. It provides endpoints for creating, reading, updating, and deleting tasks, making it a solid foundation for learning API design and task-tracking backend logic.',
+          "RESTful backend service for managing tasks, built with Express.js. It provides endpoints for creating, reading, updating, and deleting tasks, making it a solid foundation for learning API design and task-tracking backend logic.",
         stack: [
-          { name: 'Node.js', icon: '/assets/nodejs.png' },
-          { name: 'Express.js', icon: '/assets/express.jpg' },
-          { name: 'MongoDB', icon: '/assets/mongodb.png' },
+          { name: "Node.js", icon: "/assets/nodejs.png" },
+          { name: "Express.js", icon: "/assets/express.jpg" },
+          { name: "MongoDB", icon: "/assets/mongodb.png" },
         ],
-        image: '/assets/express-project-2.avif',
-        github: 'https://github.com/putrasedana/task-management-api',
+        image: "/assets/express-project-2.avif",
+        github: "https://github.com/putrasedana/task-management-api",
       },
       {
-        title: 'Open Music API',
+        title: "Open Music API",
         description:
-          'RESTful backend service for managing music records, built with Hapi.js. It offers endpoints to create, read, update, and delete songs and playlists, providing a practical foundation for learning API design and backend development.',
+          "RESTful backend service for managing music records, built with Hapi.js. It offers endpoints to create, read, update, and delete songs and playlists, providing a practical foundation for learning API design and backend development.",
         stack: [
-          { name: 'Node.js', icon: '/assets/nodejs.png' },
-          { name: 'Hapi.js', icon: '/assets/hapi.png' },
-          { name: 'PostgreSQL', icon: '/assets/postgresql.png' },
+          { name: "Node.js", icon: "/assets/nodejs.png" },
+          { name: "Hapi.js", icon: "/assets/hapi.png" },
+          { name: "PostgreSQL", icon: "/assets/postgresql.png" },
         ],
-        image: '/assets/express-project-3.avif',
-        github: 'https://github.com/putrasedana/open-music-api',
+        image: "/assets/express-project-3.avif",
+        github: "https://github.com/putrasedana/open-music-api",
       },
     ],
   },

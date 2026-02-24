@@ -1,22 +1,11 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
-import {
-  about,
-  certifications,
-  education,
-  experience,
-  skills,
-} from '@/data/resume-page';
-import Image from 'next/image';
+import { motion } from "framer-motion";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import { about, certifications, education, experience, skills } from "@/data/resume-page";
+import Image from "next/image";
 
 const Resume = () => {
   return (
@@ -28,10 +17,7 @@ const Resume = () => {
       }}
       className=" flex items-center justify-center py-12 xl:py-6 mx-auto max-w-5xl w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0"
     >
-      <Tabs
-        defaultValue="Experience"
-        className="w-full flex flex-col xl:flex-row gap-12"
-      >
+      <Tabs defaultValue="Experience" className="w-full flex flex-col xl:flex-row gap-12">
         <TabsList className="flex flex-col w-full max-w-72 mx-auto xl:mx-0 gap-6">
           <TabsTrigger value="Experience">Experience</TabsTrigger>
           <TabsTrigger value="Education">Education</TabsTrigger>
@@ -46,9 +32,7 @@ const Resume = () => {
           <TabsContent value="Experience" className="w-full">
             <div className="flex flex-col gap-7.5 text-center xl:text-left">
               <h3 className="text-4xl font-bold">{experience.title}</h3>
-              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">
-                {experience.description}
-              </p>
+              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">{experience.description}</p>
               <ScrollArea className="h-92">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
                   {experience.items.map((item, index) => {
@@ -58,9 +42,7 @@ const Resume = () => {
                         className="bg-slate-800 h-44 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-3"
                       >
                         <span className="text-green-400">{item.duration}</span>
-                        <h3 className="text-xl text-center lg:text-left">
-                          {item.position}
-                        </h3>
+                        <h3 className="text-xl text-center lg:text-left">{item.position}</h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
                           <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
@@ -78,9 +60,7 @@ const Resume = () => {
           <TabsContent value="Education" className="w-full">
             <div className="flex flex-col gap-7.5 text-center xl:text-left">
               <h3 className="text-4xl font-bold">{education.title}</h3>
-              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">
-                {education.description}
-              </p>
+              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">{education.description}</p>
               <ScrollArea className="h-92">
                 <ul className="grid grid-cols-1 lg:grid-cols-2 gap-7.5">
                   {education.items.map((item, index) => {
@@ -90,9 +70,7 @@ const Resume = () => {
                         className="bg-slate-800 h-44 py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-3"
                       >
                         <span className="text-green-400">{item.duration}</span>
-                        <h3 className="text-xl text-center lg:text-left">
-                          {item.degree}
-                        </h3>
+                        <h3 className="text-xl text-center lg:text-left">{item.degree}</h3>
                         <div className="flex items-center gap-3">
                           {/* dot */}
                           <span className="w-1.5 h-1.5 rounded-full bg-green-500"></span>
@@ -111,9 +89,7 @@ const Resume = () => {
             <div className="flex flex-col gap-7.5">
               <div className="flex flex-col gap-7.5 text-center xl:text-left">
                 <h3 className="text-4xl font-bold">{skills.title}</h3>
-                <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">
-                  {skills.description}
-                </p>
+                <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">{skills.description}</p>
               </div>
               <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 xl:gap-7.5 gap-4">
                 {skills.skillsList.map((skill, index) => {
@@ -179,21 +155,13 @@ const Resume = () => {
           </TabsContent>
 
           {/* About Me */}
-          <TabsContent
-            value="About Me"
-            className="w-full text-center xl:text-left"
-          >
+          <TabsContent value="About Me" className="w-full text-center xl:text-left">
             <div className="flex flex-col gap-7.5">
               <h3 className="text-4xl font-bold">{about.title}</h3>
-              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">
-                {about.description}
-              </p>
+              <p className="max-w-150 text-white/60 mx-auto xl:mx-0 text-justify">{about.description}</p>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 max-w-155 sm:mx-auto xl:mx-0">
                 {about.info.map((item, index) => (
-                  <li
-                    key={index}
-                    className="flex items-center justify-start gap-4"
-                  >
+                  <li key={index} className="flex items-center justify-start gap-4">
                     <span className="text-white/60">{item.fieldName}</span>
                     <span className="xl:text-lg">{item.fieldValue}</span>
                   </li>
