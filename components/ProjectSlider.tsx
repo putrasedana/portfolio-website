@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import Image from 'next/image';
-import 'swiper/css';
-import ProjectSliderBtns from './ProjectSliderBtns';
-import { Project } from '@/data/project-page';
-import { useRef } from 'react';
-import type { Swiper as SwiperInstance } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
+import "swiper/css";
+import ProjectSliderBtns from "./ProjectSliderBtns";
+import { Project } from "@/data/project-page";
+import { useRef } from "react";
+import type { Swiper as SwiperInstance } from "swiper";
 
 type Props = {
   projects: Project[];
@@ -14,11 +14,7 @@ type Props = {
   onChange: (index: number) => void;
 };
 
-export default function ProjectSlider({
-  projects,
-  activeIndex,
-  onChange,
-}: Props) {
+export default function ProjectSlider({ projects, activeIndex, onChange }: Props) {
   const swiperRef = useRef<SwiperInstance | null>(null);
 
   return (
@@ -32,12 +28,7 @@ export default function ProjectSlider({
         {projects.map((project) => (
           <SwiperSlide key={project.title}>
             <div className="h-80 relative">
-              <Image
-                src={project.image}
-                fill
-                className="object-cover"
-                alt={project.title}
-              />
+              <Image src={project.image} fill className="object-cover object-top" alt={project.title} />
             </div>
           </SwiperSlide>
         ))}
@@ -45,8 +36,7 @@ export default function ProjectSlider({
         {/* Footer UI */}
         <div className="flex items-start justify-between mt-4">
           <div className="mb-4 text-sm">
-            {String(activeIndex + 1).padStart(2, '0')} of{' '}
-            {String(projects.length).padStart(2, '0')}
+            {String(activeIndex + 1).padStart(2, "0")} of {String(projects.length).padStart(2, "0")}
           </div>
 
           <ProjectSliderBtns
