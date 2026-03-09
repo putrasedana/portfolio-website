@@ -1,6 +1,6 @@
-import { Project } from '@/data/project-page';
-import ProjectActions from './ProjectActions';
-import Image from 'next/image';
+import { Project } from "@/data/project-page";
+import ProjectActions from "./ProjectActions";
+import Image from "next/image";
 
 type Props = {
   project: Project;
@@ -17,17 +17,18 @@ export default function ProjectDetails({ project }: Props) {
         <ul className="flex gap-4">
           {project.stack.map((item, i) => (
             <li key={i} className="flex flex-wrap items-center gap-2">
-              {item.name === 'Next.js' ? (
+              {item.name === "Next.js" ? (
                 <div className="bg-white rounded-full flex items-center justify-center">
-                  <Image
-                    src={item.icon}
-                    alt={item.name}
-                    width={34}
-                    height={34}
-                  />
+                  <Image src={item.icon} alt={item.name} width={34} height={34} />
                 </div>
               ) : (
-                <Image src={item.icon} alt={item.name} width={28} height={28} />
+                <Image
+                  src={item.icon}
+                  alt={item.name}
+                  width={28}
+                  height={28}
+                  className={item.name === "Express.js" ? "rounded-full" : ""}
+                />
               )}
 
               <span className="text-white text-sm">{item.name}</span>

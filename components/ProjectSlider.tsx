@@ -27,15 +27,15 @@ export default function ProjectSlider({ projects, activeIndex, onChange }: Props
       >
         {projects.map((project) => (
           <SwiperSlide key={project.title}>
-            <div className="h-80 relative">
-              <Image src={project.image} fill className="object-cover object-top" alt={project.title} />
+            <div className="relative aspect-video border-2 border-white/60 rounded-2xl">
+              <Image src={project.image} fill className="object-cover rounded-2xl" alt={project.title} />
             </div>
           </SwiperSlide>
         ))}
 
         {/* Footer UI */}
-        <div className="flex items-start justify-between mt-4">
-          <div className="mb-4 text-sm">
+        <div className="flex items-center justify-between mt-4">
+          <div className=" text-white/70">
             {String(activeIndex + 1).padStart(2, "0")} of {String(projects.length).padStart(2, "0")}
           </div>
 
@@ -43,7 +43,7 @@ export default function ProjectSlider({ projects, activeIndex, onChange }: Props
             onPrev={() => swiperRef.current?.slidePrev()}
             onNext={() => swiperRef.current?.slideNext()}
             containerStyles="flex gap-2"
-            btnStyles="bg-green-500 hover:bg-green-600 text-slate-800 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all cursor-pointer"
+            btnStyles="bg-green-500 rounded-full hover:bg-green-600 text-slate-800 text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all cursor-pointer"
           />
         </div>
       </Swiper>

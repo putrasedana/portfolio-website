@@ -142,9 +142,6 @@ const Resume = () => {
                             className="object-contain"
                             sizes="(max-width: 1024px) 100vw, 50vw"
                           />
-
-                          {/* Thin black overlay */}
-                          <div className="absolute inset-0 bg-black/20 pointer-events-none" />
                         </div>
                       </a>
                     </li>
@@ -162,8 +159,8 @@ const Resume = () => {
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 max-w-155 sm:mx-auto xl:mx-0">
                 {about.info.map((item, index) => (
                   <li key={index} className="flex items-center justify-start gap-4">
-                    <span className="text-white/60">{item.fieldName}</span>
-                    <span className="xl:text-lg">{item.fieldValue}</span>
+                    <span className="text-white/60">{item.fieldName}:</span>
+                    <span>{item.fieldValue}</span>
                   </li>
                 ))}
               </ul>

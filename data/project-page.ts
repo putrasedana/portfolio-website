@@ -54,7 +54,7 @@ export const projectCategories: ProjectCategory[] = [
   {
     id: "frontend",
     label: "Front-End",
-    icon: "/assets/react.png",
+    icon: "/assets/frontend-projects-icon.png",
     projects: [
       {
         title: "Personal Notes App",
@@ -101,7 +101,7 @@ export const projectCategories: ProjectCategory[] = [
   {
     id: "fullstack",
     label: "Full-Stack",
-    icon: "/assets/nextjs.png",
+    icon: "/assets/fullstack-projects-icon.png",
     projects: [
       {
         title: "Pixeldenz Store",
@@ -130,13 +130,27 @@ export const projectCategories: ProjectCategory[] = [
         live: "https://dev-events-0011.vercel.app",
         github: "https://github.com/putrasedana/dev-events",
       },
+      {
+        title: "Travel Agency Dashboard",
+        description:
+          "An admin dashboard built with React Router v7, featuring interactive tables, analytics charts, and personalized trip recommendations using the Gemini API.",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React.js", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+          { name: "Appwrite", icon: "/assets/appwrite.png" },
+        ],
+        image: "/assets/fullstack-project-3.png",
+        live: "https://travel-agency-dashboard-swart.vercel.app/",
+        github: "https://github.com/putrasedana/travel-agency-dashboard",
+      },
     ],
   },
 
   {
     id: "backend",
     label: "Back-End",
-    icon: "/assets/nodejs.png",
+    icon: "/assets/backend-projects-icon.png",
     projects: [
       {
         title: "Bookshelf API",
