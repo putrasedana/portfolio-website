@@ -1,7 +1,8 @@
-'use client';
+"use client";
 
-import { stats } from '@/data/home-page';
-import CountUp from 'react-countup';
+import { stats } from "@/data/home-page";
+import CountUp from "react-countup";
+import Link from "next/link";
 
 const Stats = () => {
   return (
@@ -9,24 +10,25 @@ const Stats = () => {
       <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none">
         {stats.map((item, index) => {
           return (
-            <div
+            <Link
               key={index}
-              className="flex-1 flex gap-4 items-center justify-center xl:justify-start"
+              href={item.path}
+              className="flex-1 flex gap-4 items-center justify-center xl:justify-start group cursor-pointer"
             >
               <CountUp
                 end={item.num}
                 duration={5}
                 delay={2}
-                className="text-4xl xl:text-6xl font-extrabold"
+                className="text-4xl xl:text-6xl font-extrabold group-hover:text-green-400 transition-colors duration-300"
               />
               <p
                 className={`${
-                  item.text.length < 15 ? 'max-w-25' : 'max-w-37.5'
-                } leading-snug text-white/80`}
+                  item.text.length < 15 ? "max-w-25" : "max-w-37.5"
+                } leading-snug text-white/80 group-hover:text-white transition-colors duration-300`}
               >
                 {item.text}
               </p>
-            </div>
+            </Link>
           );
         })}
       </div>

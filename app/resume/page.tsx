@@ -6,8 +6,12 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { about, certifications, education, experience, skills } from "@/data/resume-page";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 const Resume = () => {
+  const searchParams = useSearchParams();
+  const tab = searchParams.get("tab") || "Experience";
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -17,7 +21,7 @@ const Resume = () => {
       }}
       className=" flex items-center justify-center py-12 xl:py-6 mx-auto max-w-5xl w-full px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0"
     >
-      <Tabs defaultValue="Experience" className="w-full flex flex-col xl:flex-row gap-12">
+      <Tabs defaultValue={tab} className="w-full flex flex-col xl:flex-row gap-12">
         <TabsList className="flex flex-col w-full max-w-72 mx-auto xl:mx-0 gap-6">
           <TabsTrigger value="Experience">Experience</TabsTrigger>
           <TabsTrigger value="Education">Education</TabsTrigger>

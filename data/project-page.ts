@@ -1,5 +1,4 @@
 // data/projects.ts
-
 export type Project = {
   title: string;
   description: string;
@@ -17,40 +16,6 @@ export type ProjectCategory = {
 };
 
 export const projectCategories: ProjectCategory[] = [
-  // {
-  //   id: 'javascript',
-  //   label: 'JavaScript',
-  //   icon: '/assets/js.png',
-  //   projects: [
-  //     {
-  //       title: 'Public Notes App',
-  //       description:
-  //         'A simple, clean web-based tool to create and manage your daily notes quickly and easily. Capture your thoughts, ideas, to-dos, and reminders. Powered by Dicoding Notes API https://notes-api.dicoding.dev/v2.',
-  //       stack: [
-  //         { name: 'HTML', icon: '/assets/html-5.png' },
-  //         { name: 'CSS', icon: '/assets/css-3.png' },
-  //         { name: 'JavaScript', icon: '/assets/js.png' },
-  //       ],
-  //       image: '/assets/javascript-project-1.png',
-  //       live: 'https://public-notes-app.netlify.app',
-  //       github: 'https://github.com/putrasedana/public-notes-app',
-  //     },
-  //     {
-  //       title: 'Story App',
-  //       description:
-  //         'Platform for sharing image-based stories, featuring user authentication and form validation. Powered by Dicoding Story API https://story-api.dicoding.dev/v1.',
-  //       stack: [
-  //         { name: 'HTML', icon: '/assets/html-5.png' },
-  //         { name: 'SASS', icon: '/assets/sass.png' },
-  //         { name: 'JavaScript', icon: '/assets/js.png' },
-  //       ],
-  //       image: '/assets/javascript-project-2.png',
-  //       live: 'https://story-app-0011.netlify.app',
-  //       github: 'https://github.com/putrasedana/story-app',
-  //     },
-  //   ],
-  // },
-
   {
     id: "frontend",
     label: "Front-End",
@@ -70,11 +35,11 @@ export const projectCategories: ProjectCategory[] = [
         github: "https://github.com/putrasedana/personal-notes-app",
       },
       {
-        title: "Random Forum App",
+        title: "Dev Forum App",
         description:
           "A simple, interactive web forum where users can create and join discussions, post messages, and engage with others in community-style threads. Powered by Dicoding Forum API https://forum-api.dicoding.dev/v1.",
         stack: [
-          { name: "JavaScript", icon: "/assets/js.png" },
+          { name: "TypeScript", icon: "/assets/typescript.png" },
           { name: "React", icon: "/assets/react.png" },
           { name: "Tailwind", icon: "/assets/tailwind.png" },
         ],
@@ -83,9 +48,9 @@ export const projectCategories: ProjectCategory[] = [
         github: "https://github.com/putrasedana/random-forum-app",
       },
       {
-        title: "Resumind",
+        title: "Resume Analyzer App",
         description:
-          "AI Resume Analyzer is a web app that uses AI to evaluate resumes, provide ATS compatibility insights, and suggest improvements to better match job descriptions. Powered by https://developer.puter.com",
+          "Resumind is a resume analyzer that uses AI to evaluate resumes, provide ATS compatibility insights, and suggest improvements to better match job descriptions. Powered by https://developer.puter.com",
         stack: [
           { name: "TypeScript", icon: "/assets/typescript.png" },
           { name: "React", icon: "/assets/react.png" },
