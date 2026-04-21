@@ -1,8 +1,8 @@
 "use client";
 
 import { stats } from "@/data/home-page";
-import CountUp from "react-countup";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 const Stats = () => {
   return (

@@ -2,7 +2,6 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
-import "swiper/css";
 import ProjectSliderBtns from "./ProjectSliderBtns";
 import { Project } from "@/data/project-page";
 import { useRef } from "react";
@@ -22,13 +21,22 @@ export default function ProjectSlider({ projects, activeIndex, onChange }: Props
       <Swiper
         spaceBetween={30}
         slidesPerView={1}
+        loop={false}
+        grabCursor={true}
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         onSlideChange={(swiper) => onChange(swiper.realIndex)}
       >
         {projects.map((project) => (
           <SwiperSlide key={project.title}>
             <div className="relative aspect-video border-2 border-white/60 rounded-2xl">
-              <Image src={project.image} fill className="object-cover rounded-2xl" alt={project.title} />
+              <Image
+                src={project.image}
+                fill
+                className="object-cover rounded-2xl"
+                alt={project.title}
+                sizes="(max-width: 1280px) 100vw, 50vw"
+                priority={projects.indexOf(project) === 0}
+              />
             </div>
           </SwiperSlide>
         ))}

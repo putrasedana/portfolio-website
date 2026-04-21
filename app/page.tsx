@@ -1,12 +1,22 @@
-import { Button } from '@/components/ui/button';
-import { FiDownload } from 'react-icons/fi';
-import Social from '@/components/Social';
-import Photo from '@/components/Photo';
-import Stats from '@/components/Stats';
+"use client";
+
+import { Button } from "@/components/ui/button";
+import { FiDownload } from "react-icons/fi";
+import { motion } from "framer-motion";
+import Social from "@/components/Social";
+import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 const Home = () => {
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-10">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{
+        opacity: 1,
+        transition: { delay: 2.2, duration: 0.4 },
+      }}
+      className="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-10"
+    >
       <div className="flex flex-col xl:flex-row items-center justify-between">
         {/* text */}
         <div className="text-center xl:text-left order-2 xl:order-0">
@@ -16,8 +26,8 @@ const Home = () => {
             <span className="text-green-400">Putra Sedana</span>
           </h1>
           <p className="max-w-125 mb-9 text-white/80">
-            A front-end-focused developer who understands back-end fundamentals
-            to build complete, maintainable web applications.
+            A front-end-focused developer who understands back-end fundamentals to build complete, maintainable web
+            applications.
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button
@@ -51,7 +61,7 @@ const Home = () => {
         </div>
       </div>
       <Stats />
-    </div>
+    </motion.div>
   );
 };
 export default Home;

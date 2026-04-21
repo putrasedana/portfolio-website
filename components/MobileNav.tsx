@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import { usePathname } from 'next/navigation';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from './ui/sheet';
-import Link from 'next/link';
-import { CiMenuFries } from 'react-icons/ci';
-import { links } from '@/data/nav-links';
+import { usePathname } from "next/navigation";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
+import Link from "next/link";
+import { CiMenuFries } from "react-icons/ci";
+import { links } from "@/data/nav-links";
 
 const MobileNav = () => {
   const pathname = usePathname();
 
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
+      <SheetTrigger className="flex justify-center items-center" aria-label="Open navigation menu">
         <CiMenuFries className="cursor-pointer text-[32px] text-green-400" />
       </SheetTrigger>
 
@@ -33,10 +33,8 @@ const MobileNav = () => {
               <Link
                 href={link.path}
                 className={`text-xl capitalize transition-all hover:text-green-400 ${
-                  (link.path === '/'
-                    ? pathname === '/'
-                    : pathname.startsWith(link.path)) &&
-                  'text-green-400 border-b-2 border-green-500'
+                  (link.path === "/" ? pathname === "/" : pathname.startsWith(link.path)) &&
+                  "text-green-400 border-b-2 border-green-500"
                 }`}
               >
                 <h2 className="text-2xl font-semibold">{link.name}</h2>

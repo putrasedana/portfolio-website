@@ -1,11 +1,6 @@
-import Link from 'next/link';
-import { BsArrowUpRight, BsGithub } from 'react-icons/bs';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+import Link from "next/link";
+import { BsArrowUpRight, BsGithub } from "react-icons/bs";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 type Props = {
   github: string;
@@ -22,9 +17,10 @@ export default function ProjectActions({ github, live }: Props) {
               href={github}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View GitHub Repository"
               className="w-16 h-16 rounded-full bg-gray-800/70 hover:text-green-500 transition-all flex items-center justify-center"
             >
-              <BsGithub className="text-3xl" />
+              <BsGithub className="text-3xl" aria-hidden="true" />
             </Link>
           </TooltipTrigger>
           <TooltipContent>Github Repository</TooltipContent>
@@ -39,13 +35,14 @@ export default function ProjectActions({ github, live }: Props) {
                 href={live}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="View Live Demo"
                 className="w-16 h-16 rounded-full bg-gray-800/70 hover:text-green-500 transition-all flex items-center justify-center"
               >
-                <BsArrowUpRight className="text-3xl" />
+                <BsArrowUpRight className="text-3xl" aria-hidden="true" />
               </Link>
             )}
           </TooltipTrigger>
-          <TooltipContent>{live && 'Live Demo'}</TooltipContent>
+          <TooltipContent>{live && "Live Demo"}</TooltipContent>
         </Tooltip>
       </TooltipProvider>
     </div>

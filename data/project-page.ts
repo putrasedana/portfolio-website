@@ -16,6 +16,7 @@ export type ProjectCategory = {
 };
 
 export const projectCategories: ProjectCategory[] = [
+  // FRONT-END PROJECTS ==============================================
   {
     id: "frontend",
     label: "Front-End",
@@ -44,8 +45,8 @@ export const projectCategories: ProjectCategory[] = [
           { name: "Tailwind", icon: "/assets/tailwind.png" },
         ],
         image: "/assets/frontend-project-2.png",
-        live: "https://random-forum-app.vercel.app",
-        github: "https://github.com/putrasedana/random-forum-app",
+        live: "https://dev-forum-app.vercel.app",
+        github: "https://github.com/putrasedana/dev-forum-app",
       },
       {
         title: "Resume Analyzer App",
@@ -63,6 +64,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
 
+  // FULL-STACK PROJECTS ==============================================
   {
     id: "fullstack",
     label: "Full-Stack",
@@ -78,7 +80,7 @@ export const projectCategories: ProjectCategory[] = [
           { name: "Supabase", icon: "/assets/supabase.png" },
         ],
         image: "/assets/fullstack-project-1.png",
-        live: "https://pixeldenz.store/",
+        live: "https://pixeldenz.vercel.app/",
         github: "https://github.com/putrasedana/pixeldenz",
       },
       {
@@ -112,6 +114,7 @@ export const projectCategories: ProjectCategory[] = [
     ],
   },
 
+  // BACK-END PROJECTS ==============================================
   {
     id: "backend",
     label: "Back-End",
