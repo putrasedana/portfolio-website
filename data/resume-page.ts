@@ -1,11 +1,10 @@
 import { FaHtml5, FaCss3, FaJs, FaReact, FaNodeJs, FaGithub, FaGitAlt } from "react-icons/fa";
-import { SiTailwindcss, SiNextdotjs, SiTypescript } from "react-icons/si";
+import { SiTailwindcss, SiTypescript, SiWordpress, SiWix } from "react-icons/si";
 
 // experience data
 const experience = {
-  title: "My Experience",
-  description:
-    "Through hands-on projects and structured courses, I've continuously developed my skills and deepened my understanding of web development.",
+  title: "Experience",
+  description: "",
   items: [
     {
       company: "Roamin Creative",
@@ -22,18 +21,12 @@ const experience = {
 
 // education data
 const education = {
-  title: "My Education",
-  description:
-    "I have pursued formal education and certifications to strengthen my foundation in web development. Here are some of the key educational milestones in my career.",
+  title: "Education",
+  description: "",
   items: [
     {
       institution: "Primakara University",
       degree: "Bachelor of Information System",
-      duration: "2022 - Present",
-    },
-    {
-      institution: "Dicoding Academy",
-      degree: "Full Stack Web Development",
       duration: "2022 - Present",
     },
   ],
@@ -41,16 +34,16 @@ const education = {
 
 // skills data
 const skills = {
-  title: "My Skills",
-  description:
-    "My skill set includes a range of technologies and tools that I have worked with through projects and learning experiences.",
+  title: "Skills",
+  description: "",
   skillsList: [
+    { name: "WIX", icon: SiWix },
+    { name: "WordPress", icon: SiWordpress },
     { name: "HTML", icon: FaHtml5 },
     { name: "CSS", icon: FaCss3 },
     { name: "JavaScript", icon: FaJs },
     { name: "TypeScript", icon: SiTypescript },
     { name: "React", icon: FaReact },
-    { name: "Next.js", icon: SiNextdotjs },
     { name: "Tailwind CSS", icon: SiTailwindcss },
     { name: "Node.js", icon: FaNodeJs },
     { name: "Git", icon: FaGitAlt },
@@ -60,7 +53,7 @@ const skills = {
 
 // certifications data
 const certifications = {
-  title: "My Certifications",
+  title: "Certifications",
   items: [
     {
       title: "React Certification",
@@ -88,8 +81,7 @@ const certifications = {
 // about data
 const about = {
   title: "About Me",
-  description:
-    "I am a dedicated web developer with experience gained from self-learning and academic studies. I enjoy building responsive, user-friendly web applications and continuously learning modern web technologies.",
+  description: "I enjoy building responsive, user-friendly websites and continuously learning modern web technologies.",
   info: [
     {
       fieldName: "Name",
@@ -101,7 +93,7 @@ const about = {
     },
     {
       fieldName: "Experience",
-      fieldValue: "8 months",
+      fieldValue: "2 Internships",
     },
     {
       fieldName: "Languages",

@@ -1,13 +1,33 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
 import { links } from "@/data/nav-links";
 
+const pathToHash = (pathname: string, hash: string) => {
+  if (hash) return hash;
+  if (pathname === "/projects") return "#projects";
+  if (pathname === "/resume") return "#resume";
+  if (pathname === "/certifications") return "#certifications";
+  return "#home";
+};
+
 const MobileNav = () => {
-  const pathname = usePathname();
+  const [hash, setHash] = useState("#home");
+
+  useEffect(() => {
+    const updateHash = () => {
+      const pathname = window.location.pathname;
+      const currentHash = window.location.hash;
+      setHash(pathToHash(pathname, currentHash));
+    };
+
+    updateHash();
+    window.addEventListener("hashchange", updateHash);
+    return () => window.removeEventListener("hashchange", updateHash);
+  }, []);
 
   return (
     <Sheet>
@@ -19,7 +39,7 @@ const MobileNav = () => {
         {/* Logo */}
         <div className="mt-36 mb-20 text-center">
           <SheetClose asChild>
-            <Link href="/">
+            <Link href="#home">
               <h1 className="text-4xl font-semibold">
                 PS<span className="text-green-400">.</span>
               </h1>
@@ -32,9 +52,9 @@ const MobileNav = () => {
             <SheetClose key={link.path} asChild>
               <Link
                 href={link.path}
+                onClick={() => setHash(link.path)}
                 className={`text-xl capitalize transition-all hover:text-green-400 ${
-                  (link.path === "/" ? pathname === "/" : pathname.startsWith(link.path)) &&
-                  "text-green-400 border-b-2 border-green-500"
+                  link.path === hash && "text-green-400 border-b-2 border-green-500"
                 }`}
               >
                 <h2 className="text-2xl font-semibold">{link.name}</h2>

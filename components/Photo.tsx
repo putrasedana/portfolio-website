@@ -6,22 +6,9 @@ import Image from "next/image";
 const Photo = () => {
   return (
     <div className="w-full h-full relative">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{
-          opacity: 1,
-          transition: { delay: 2, duration: 0.4, ease: "easeIn" },
-        }}
-      >
+      <div>
         {/* Reduced image container size */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{
-            opacity: 1,
-            transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
-          }}
-          className="w-60 h-60 sm:w-80 sm:h-80 lg:w-100 lg:h-100 mix-blend-lighten absolute"
-        >
+        <div className="w-60 h-60 sm:w-80 sm:h-80 lg:w-100 lg:h-100 mix-blend-lighten absolute">
           <Image
             src="/assets/photo.jpg"
             priority
@@ -31,7 +18,7 @@ const Photo = () => {
             className="object-contain rounded-full"
             sizes="(max-width: 640px) 240px, (max-width: 1024px) 320px, 400px"
           />
-        </motion.div>
+        </div>
 
         {/* Adjusted circle to match */}
         <motion.svg
@@ -60,7 +47,7 @@ const Photo = () => {
             }}
           />
         </motion.svg>
-      </motion.div>
+      </div>
     </div>
   );
 };

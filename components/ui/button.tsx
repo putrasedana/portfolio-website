@@ -9,8 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          "bg-green-500 text-slate-950 hover:bg-green-600 cursor-pointer font-semibold",
+        default: "bg-green-500 text-slate-950 transition hover:bg-green-400 cursor-pointer font-semibold",
         primary: "bg-slate-800 text-white",
         outline:
           "border border-green-500 bg-transparent text-green-400 hover:bg-green-500 hover:text-slate-950 cursor-pointer",
@@ -34,13 +33,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
 }
 
-function Button({
-  className,
-  variant = "default",
-  size = "default",
-  asChild = false,
-  ...props
-}: ButtonProps) {
+function Button({ className, variant = "default", size = "default", asChild = false, ...props }: ButtonProps) {
   const Comp = asChild ? Slot : "button";
 
   return (

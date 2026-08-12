@@ -1,7 +1,5 @@
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import StairTransaction from "@/components/StairTransaction";
-import Header from "@/components/Header";
 
 const jetbrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -20,11 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preload" as="image" href="/assets/photo.jpg" />
       </head>
-      <body className={`${jetbrainsMono.variable} antialiased bg-slate-900 text-white jetbrains-mono`}>
-        <Header />
-        <StairTransaction />
-        <main>{children}</main>
-      </body>
+      <body className={`${jetbrainsMono.variable} antialiased bg-slate-900 text-white jetbrains-mono`}>{children}</body>
     </html>
   );
 }
