@@ -58,7 +58,7 @@ export default function CertificationsPage() {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
-                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
                 <div className="pointer-events-none absolute inset-0 flex items-end justify-center p-4">
                   <span className="rounded-full bg-white/10 px-4 py-2 text-sm text-white backdrop-blur">
                     View preview
@@ -67,18 +67,17 @@ export default function CertificationsPage() {
               </button>
 
               <div className="mt-4 flex items-center justify-between gap-4">
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                 <Link
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-left"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-green-400 transition hover:bg-white/20"
                   aria-label={`Open external certificate link for ${item.title}`}
+                  title={`Open external certificate link for ${item.title}`}
                 >
-                  <h3 className="text-lg font-semibold text-white hover:text-green-400 transition-colors">
-                    {item.title}
-                  </h3>
+                  <ExternalLink size={18} />
                 </Link>
-                <ExternalLink className="text-green-400" size={18} />
               </div>
             </article>
           ))}

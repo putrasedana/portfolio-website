@@ -24,8 +24,14 @@ type CategoryProps = {
 };
 
 const CategoryBlock = ({ category }: CategoryProps) => {
+  const featuredProjects = category.projects.filter((project) => project.featured);
+
+  if (featuredProjects.length === 0) {
+    return null;
+  }
+
   const [activeIndex, setActiveIndex] = useState(0);
-  const project = category.projects[activeIndex];
+  const project = featuredProjects[activeIndex];
 
   return (
     <section className="flex flex-col gap-10 py-12">
@@ -33,7 +39,7 @@ const CategoryBlock = ({ category }: CategoryProps) => {
         <h2 className="text-4xl font-bold">{category.label}</h2>
         <div className="flex justify-center xl:justify-start">
           <Link
-            href="/certifications"
+            href="/projects"
             className="inline-flex items-center justify-center rounded-lg bg-green-500 px-8 py-3 font-semibold text-slate-950 transition hover:bg-green-400"
           >
             See all projects
@@ -54,7 +60,7 @@ const CategoryBlock = ({ category }: CategoryProps) => {
               {project.stack.map((item, i) => (
                 <li
                   key={i}
-                  className="flex items-center gap-2 rounded-full bg-white/10 py-2 px-3 text-sm text-white/80"
+                  className="flex items-center gap-2 rounded-full  py-2 px-3 text-sm border-white/10 bg-white/5 text-slate-200"
                 >
                   <Image
                     src={item.icon}
@@ -70,31 +76,34 @@ const CategoryBlock = ({ category }: CategoryProps) => {
           </div>
 
           <div className="flex flex-wrap gap-4">
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-medium transition hover:bg-green-500 hover:text-slate-900"
-            >
-              <BsGithub className="text-base" />
-              GitHub
-            </a>
             {project.live ? (
               <a
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-3 text-sm font-medium transition hover:bg-green-500 hover:text-slate-900"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm transition hover:bg-green-500 hover:text-slate-900 border-white/10 bg-white/5 text-slate-200"
               >
                 <BsArrowUpRight className="text-base" />
                 Live Demo
+              </a>
+            ) : null}
+
+            {project.github ? (
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full px-5 py-3 text-sm transition hover:bg-green-500 hover:text-slate-900 border-white/10 bg-white/5 text-slate-200"
+              >
+                <BsGithub className="text-base" />
+                GitHub
               </a>
             ) : null}
           </div>
 
           <div className="flex items-center justify-between gap-4 pt-4 border-t border-white/20">
             <div className="text-sm text-white/60">
-              {String(activeIndex + 1).padStart(2, "0")} / {String(category.projects.length).padStart(2, "0")}
+              {String(activeIndex + 1).padStart(2, "0")} / {String(featuredProjects.length).padStart(2, "0")}
             </div>
             <div className="flex gap-3">
               <button
@@ -108,8 +117,8 @@ const CategoryBlock = ({ category }: CategoryProps) => {
               </button>
               <button
                 type="button"
-                onClick={() => setActiveIndex((current) => Math.min(current + 1, category.projects.length - 1))}
-                disabled={activeIndex === category.projects.length - 1}
+                onClick={() => setActiveIndex((current) => Math.min(current + 1, featuredProjects.length - 1))}
+                disabled={activeIndex === featuredProjects.length - 1}
                 className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-white/10 transition hover:bg-white/20 disabled:cursor-not-allowed disabled:opacity-40"
                 aria-label="Next project"
               >

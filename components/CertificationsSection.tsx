@@ -78,18 +78,17 @@ const CertificationsSection = ({ showButton = true }: Props) => {
               </button>
 
               <div className="mt-4 flex items-center justify-between gap-4">
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
                 <Link
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-left"
+                  className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-green-400 transition hover:bg-white/20"
                   aria-label={`Open external certificate link for ${item.title}`}
+                  title={`Open external certificate link for ${item.title}`}
                 >
-                  <h3 className="text-lg font-semibold text-white hover:text-green-400 transition-colors">
-                    {item.title}
-                  </h3>
+                  <ExternalLink size={18} />
                 </Link>
-                <ExternalLink className="text-green-400" size={18} />
               </div>
             </article>
           ))}
