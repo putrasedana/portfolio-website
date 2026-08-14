@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between p-3">
                   <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/85 backdrop-blur-sm">
-                    {project.category}
+                    Featured Project
                   </span>
                   <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300 backdrop-blur-sm">
                     {project.live ? "Live" : "Code"}

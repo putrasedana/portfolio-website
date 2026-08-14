@@ -51,6 +51,18 @@ export const projectCategories: ProjectCategory[] = [
         github: "https://github.com/putrasedana/dev-forum-app",
         featured: true,
       },
+      {
+        title: "BrewHaven Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/brewhaven-website.png",
+        live: "https://brewhaven-coffeeshop-website.vercel.app/",
+        github: "https://github.com/putrasedana/brewhaven-coffeeshop-website",
+        featured: true,
+      },
     ],
   },
 ];
