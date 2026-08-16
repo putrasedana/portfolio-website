@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "./ui/sheet";
 import Link from "next/link";
 import { CiMenuFries } from "react-icons/ci";
-import { links } from "@/data/nav-links";
+import { links } from "@/data/nav";
 
 const pathToHash = (pathname: string, hash: string) => {
   if (hash) return hash;

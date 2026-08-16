@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { BsArrowUpRight, BsGithub, BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { projectCategories } from "@/data/project-page";
+import { projectCategories } from "@/data/project";
 import Link from "next/link";
 
 const ProjectsSection = () => {
@@ -134,7 +134,7 @@ const CategoryBlock = ({ category }: CategoryProps) => {
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-cover object-top"
               sizes="(max-width: 1280px) 100vw, 50vw"
               priority={activeIndex === 0}
             />

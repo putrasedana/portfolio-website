@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { links } from "@/data/nav-links";
+import { links } from "@/data/nav";
 
 const pathToHash = (pathname: string, hash: string) => {
   if (hash) return hash;

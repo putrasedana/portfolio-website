@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, X } from "lucide-react";
-import { certifications } from "@/data/resume-page";
+import { certifications } from "@/data/resume";
 
 export default function CertificationsPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -30,7 +30,7 @@ export default function CertificationsPage() {
   return (
     <main className="min-h-screen py-12">
       <section className="xl:py-6 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
-        <div className="flex justify-between items-center mb-8">
+        <div className="mb-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
           <h1 className="text-4xl font-bold">{certifications.title}</h1>
 
           <Link
@@ -42,7 +42,7 @@ export default function CertificationsPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {certifications.items.map((item, idx) => (
             <article key={idx} className="overflow-hidden rounded-lg border border-white/20 bg-slate-950 p-4">
               <button

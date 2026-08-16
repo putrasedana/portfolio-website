@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { about, education, experience, skills } from "@/data/resume-page";
+import { about, education, experience, skills } from "@/data/resume";
 import { useSearchParams } from "next/navigation";
 
 const ResumeContent = () => {

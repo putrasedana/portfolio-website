@@ -1,4 +1,4 @@
-import { socials } from "@/data/home-page";
+import { socials } from "@/data/home";
 
 interface SocialProps {
   containerStyles: string;

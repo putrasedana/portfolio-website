@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, ArrowRight, ExternalLink, X } from "lucide-react";
-import { certifications } from "@/data/resume-page";
+import { certifications } from "@/data/resume";
 
 type Props = {
   showButton?: boolean;
@@ -37,18 +37,17 @@ const CertificationsSection = ({ showButton = true }: Props) => {
       className="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0 py-12 xl:py-0 mb-20"
     >
       <div className="flex flex-col gap-6 text-center xl:text-left">
-        <div className="flex justify-between items-center ">
+        <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between justify-between items-center">
           <h2 className="text-4xl font-bold">{certifications.title}</h2>
-          {showButton ? (
-            <div className="flex justify-center xl:justify-start">
-              <Link
-                href="/certifications"
-                className="inline-flex items-center justify-center rounded-lg bg-green-500 px-8 py-3 font-semibold text-slate-950 transition hover:bg-green-400 "
-              >
-                See all certifications
-              </Link>
-            </div>
-          ) : null}
+
+          <div className="flex justify-center xl:justify-start">
+            <Link
+              href="/certifications"
+              className="inline-flex items-center justify-center rounded-lg bg-green-500 px-8 py-3 font-semibold text-slate-950 transition hover:bg-green-400 "
+            >
+              See all certifications
+            </Link>
+          </div>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2">
           {certifications.items.map((item, index) => (

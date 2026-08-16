@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
 import { ExternalLink } from "lucide-react";
-import { projectCategories } from "@/data/project-page";
+import { projectCategories } from "@/data/project";
 
 export default function ProjectsPage() {
   const projects = projectCategories.flatMap((category) =>
@@ -15,7 +15,7 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen py-12">
       <section className="xl:py-6 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
-        <div className="mb-8 flex items-center justify-between gap-4">
+        <div className="mb-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
           <h1 className="text-4xl font-bold">Projects</h1>
 
           <Link
@@ -27,7 +27,7 @@ export default function ProjectsPage() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
           {projects.map((project, idx) => (
             <article
               key={`${project.title}-${idx}`}
@@ -38,7 +38,7 @@ export default function ProjectsPage() {
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover transition duration-300 hover:scale-105"
+                  className="object-cover object-top transition duration-300 hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 33vw"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/10 to-transparent" />

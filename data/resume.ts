@@ -38,7 +38,7 @@ const skills = {
   description: "",
   skillsList: [
     { name: "WIX", icon: SiWix },
-    { name: "WordPress", icon: SiWordpress },
+    // { name: "WordPress", icon: SiWordpress },
     { name: "HTML", icon: FaHtml5 },
     { name: "CSS", icon: FaCss3 },
     { name: "JavaScript", icon: FaJs },
