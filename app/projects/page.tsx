@@ -13,7 +13,7 @@ export default function ProjectsPage() {
   );
 
   return (
-    <main className="min-h-screen py-12">
+    <main className="min-h-screen py-12 pb-32">
       <section className="xl:py-6 mx-auto max-w-7xl px-4 sm:px-6 md:px-8 lg:px-12 xl:px-0">
         <div className="mb-8 flex flex-col-reverse lg:flex-row items-center justify-between gap-4">
           <h1 className="text-4xl font-bold">Projects</h1>
@@ -43,9 +43,13 @@ export default function ProjectsPage() {
                 />
                 <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-slate-950/80 via-slate-950/10 to-transparent" />
                 <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between p-3">
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/85 backdrop-blur-sm">
-                    Featured Project
-                  </span>
+                  {project.featured ? (
+                    <span className="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-[0.2em] text-white/85 backdrop-blur-sm">
+                      Featured Project
+                    </span>
+                  ) : (
+                    <span></span>
+                  )}
                   <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300 backdrop-blur-sm">
                     {project.live ? "Live" : "Code"}
                   </span>
@@ -89,7 +93,7 @@ export default function ProjectsPage() {
                 {project.stack.map((item) => (
                   <span
                     key={`${project.title}-${item.name}`}
-                    className="flex items-center gap-1.5 rounded-full  py-2 px-3 text-xs border-white/10 bg-white/5 text-slate-200"
+                    className="flex items-center gap-1.5 rounded-full  py-2 px-3 text-xs border border-white/10 bg-white/5 text-slate-200"
                   >
                     <Image
                       src={item.icon}

@@ -20,6 +20,26 @@ export const projectCategories: ProjectCategory[] = [
     label: "Featured Projects",
     projects: [
       {
+        title: "Jard'or Website",
+        stack: [{ name: "WIX", icon: "/assets/wix.png" }],
+        image: "/assets/jardor-website.png",
+        live: "https://putrasedana03.wixsite.com/jardor",
+        github: "",
+        featured: true,
+      },
+      {
+        title: "Notion Marketing Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/notion-clone.png",
+        live: "https://notion-marketing-website-clone.vercel.app/",
+        github: "https://github.com/putrasedana/notion-clone",
+        featured: true,
+      },
+      {
         title: "Personal Notes App",
         stack: [
           { name: "TypeScript", icon: "/assets/typescript.png" },
@@ -29,14 +49,6 @@ export const projectCategories: ProjectCategory[] = [
         image: "/assets/personal-notes-app.png",
         live: "https://personal-notes-app-0011.netlify.app",
         github: "https://github.com/putrasedana/personal-notes-app",
-        featured: true,
-      },
-      {
-        title: "Jard'or Website",
-        stack: [{ name: "WIX", icon: "/assets/wix.png" }],
-        image: "/assets/jardor-website.png",
-        live: "https://putrasedana03.wixsite.com/jardor",
-        github: "",
         featured: true,
       },
       {
@@ -52,6 +64,18 @@ export const projectCategories: ProjectCategory[] = [
         featured: true,
       },
       {
+        title: "BSF Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/bali-strength-flow.png",
+        live: "https://bali-strength-flow-website.vercel.app/",
+        github: "https://github.com/putrasedana/bali-strength-flow-website",
+        featured: false,
+      },
+      {
         title: "BrewHaven Website",
         stack: [
           { name: "TypeScript", icon: "/assets/typescript.png" },
@@ -61,7 +85,31 @@ export const projectCategories: ProjectCategory[] = [
         image: "/assets/brewhaven-website.png",
         live: "https://brewhaven-coffeeshop-website.vercel.app/",
         github: "https://github.com/putrasedana/brewhaven-coffeeshop-website",
-        featured: true,
+        featured: false,
+      },
+      {
+        title: "Pixeldenz Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/pixeldenz.png",
+        live: "https://pixeldenz.vercel.app/",
+        github: "https://github.com/putrasedana/pixeldenz",
+        featured: false,
+      },
+      {
+        title: "TGE Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/the-gentlemans-edge-website.png",
+        live: "https://the-gentlemans-edge-website.vercel.app/",
+        github: "https://github.com/putrasedana/the-gentlemans-edge-website",
+        featured: false,
       },
       {
         title: "TRP Website",
@@ -73,7 +121,7 @@ export const projectCategories: ProjectCategory[] = [
         image: "/assets/the-rustic-plate-website.png",
         live: "https://the-rustic-plate-website.vercel.app/",
         github: "https://github.com/putrasedana/the-rustic-plate-website",
-        featured: true,
+        featured: false,
       },
     ],
   },

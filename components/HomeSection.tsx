@@ -16,8 +16,8 @@ const HomeSection = () => {
             <span className="text-green-400">Putra Sedana</span>
           </h1>
           <p className="max-w-125 mb-9 text-white/80">
-            A web developer skilled in HTML, CSS, JavaScript, and React. I love solving problems through code and am
-            eager to bring my enthusiasm to a dynamic development team.
+            A web developer skilled in HTML, CSS, JavaScript, React, and WIX. I enjoy building responsive, user-friendly
+            websites and am eager to bring my skills to a dynamic team.
           </p>
           <div className="flex flex-col xl:flex-row items-center gap-8">
             <Button
