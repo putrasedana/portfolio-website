@@ -123,6 +123,42 @@ export const projectCategories: ProjectCategory[] = [
         github: "https://github.com/putrasedana/the-rustic-plate-website",
         featured: false,
       },
+      {
+        title: "SweetCrumb Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/sweet-crumb-website.png",
+        live: "https://sweet-crumb-website.netlify.app/",
+        github: "https://github.com/putrasedana/sweet-crumb-website",
+        featured: false,
+      },
+      {
+        title: "Photographer Portfolio Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/photographer-portfolio-website.png",
+        live: "https://photographer-portfolio-website-0.netlify.app/",
+        github: "https://github.com/putrasedana/photographer-portfolio-website",
+        featured: false,
+      },
+      {
+        title: "Savory Haven Website",
+        stack: [
+          { name: "TypeScript", icon: "/assets/typescript.png" },
+          { name: "React", icon: "/assets/react.png" },
+          { name: "Tailwind", icon: "/assets/tailwind.png" },
+        ],
+        image: "/assets/savory-haven-website.png",
+        live: "https://savory-haven-website.vercel.app/",
+        github: "https://github.com/putrasedana/savory-haven-website",
+        featured: false,
+      },
     ],
   },
 ];

@@ -28,10 +28,10 @@ export default function ProjectsPage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-          {projects.map((project, idx) => (
+          {projects.map((project, index) => (
             <article
-              key={`${project.title}-${idx}`}
-              className="overflow-hidden rounded-lg border border-white/20 bg-slate-950 p-4 shadow-lg shadow-slate-950/20 "
+              key={`${project.title}-${index}`}
+              className="flex h-full flex-col overflow-hidden rounded-lg border border-white/20 bg-slate-950 p-4 shadow-lg shadow-slate-950/20"
             >
               <div className="relative h-56 w-full overflow-hidden rounded-lg bg-slate-900">
                 <Image
@@ -50,13 +50,10 @@ export default function ProjectsPage() {
                   ) : (
                     <span></span>
                   )}
-                  <span className="rounded-full bg-green-500/20 px-3 py-1 text-xs font-medium text-green-300 backdrop-blur-sm">
-                    {project.live ? "Live" : "Code"}
-                  </span>
                 </div>
               </div>
 
-              <div className="mt-4 flex items-start justify-between gap-4">
+              <div className="mt-4 flex items-center justify-between gap-4">
                 <div>
                   <h3 className="text-xl font-semibold text-white">{project.title}</h3>
                 </div>
@@ -89,19 +86,13 @@ export default function ProjectsPage() {
                 </div>
               </div>
 
-              <div className="mt-4 flex flex-wrap gap-2">
+              <div className="mt-auto flex flex-wrap gap-2 pt-4">
                 {project.stack.map((item) => (
                   <span
                     key={`${project.title}-${item.name}`}
                     className="flex items-center gap-1.5 rounded-full  py-2 px-3 text-xs border border-white/10 bg-white/5 text-slate-200"
                   >
-                    <Image
-                      src={item.icon}
-                      alt={item.name}
-                      width={18}
-                      height={18}
-                      className={item.name === "Express.js" ? "rounded-full" : ""}
-                    />
+                    <Image src={item.icon} alt={item.name} width={18} height={18} className={item.name} />
                     {item.name}
                   </span>
                 ))}
