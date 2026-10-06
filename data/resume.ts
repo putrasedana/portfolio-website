@@ -56,6 +56,11 @@ const certifications = {
   title: "Certifications",
   items: [
     {
+      title: "Responsive Web Design",
+      image: "/assets/responsive-web-design-certificate.png",
+      link: "https://www.freecodecamp.org/certification/fcc83562b63-5acb-4aa8-8d75-11713aa18c24/responsive-web-design-v9",
+    },
+    {
       title: "React Certification",
       image: "/assets/react-certificate.png",
       link: "https://www.dicoding.com/certificates/KEXL25GM0ZG2",
@@ -66,14 +71,14 @@ const certifications = {
       link: "https://www.dicoding.com/certificates/MRZMYMGDLZYQ",
     },
     {
-      title: "Back-End Certification",
-      image: "/assets/backend-certificate.png",
-      link: "https://www.dicoding.com/certificates/2VX3K60YNXYQ",
-    },
-    {
       title: "JavaScript Certification",
       image: "/assets/javascript-certificate.png",
       link: "https://drive.google.com/file/d/1WNki5f-hkoFEdmUNcqUtl23hI3CkAJVS/view",
+    },
+    {
+      title: "Back-End Certification",
+      image: "/assets/backend-certificate.png",
+      link: "https://www.dicoding.com/certificates/2VX3K60YNXYQ",
     },
   ],
 };

@@ -11,6 +11,7 @@ type Props = {
 };
 
 const CertificationsSection = ({ showButton = true }: Props) => {
+  const showcaseItems = certifications.items.slice(0, 4);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const handleImageClick = (index: number) => {
@@ -21,15 +22,15 @@ const CertificationsSection = ({ showButton = true }: Props) => {
 
   const showPrev = () => {
     if (activeIndex === null) return;
-    setActiveIndex((activeIndex - 1 + certifications.items.length) % certifications.items.length);
+    setActiveIndex((activeIndex - 1 + showcaseItems.length) % showcaseItems.length);
   };
 
   const showNext = () => {
     if (activeIndex === null) return;
-    setActiveIndex((activeIndex + 1) % certifications.items.length);
+    setActiveIndex((activeIndex + 1) % showcaseItems.length);
   };
 
-  const activeItem = activeIndex !== null ? certifications.items[activeIndex] : null;
+  const activeItem = activeIndex !== null ? showcaseItems[activeIndex] : null;
 
   return (
     <section
@@ -50,7 +51,7 @@ const CertificationsSection = ({ showButton = true }: Props) => {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-4 md:grid-cols-6 md:grid-rows-2">
-          {certifications.items.map((item, index) => (
+          {showcaseItems.map((item, index) => (
             <article
               key={index}
               className="md:col-span-3 overflow-hidden rounded-lg border border-white/20 bg-slate-950 p-4"
